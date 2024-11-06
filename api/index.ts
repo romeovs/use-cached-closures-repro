@@ -1,6 +1,6 @@
-function defineClient() {
+function defineClient(start: number) {
 	function generate() {
-		return Math.random()
+		return start + Math.random()
 	}
 
 	async function random() {
@@ -11,4 +11,4 @@ function defineClient() {
 	return { random }
 }
 
-export const client = defineClient()
+export const client = defineClient(100)
